@@ -1,56 +1,63 @@
-/* style.css */
-body {
+/* Elegant Navbar Styling */
+body <script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+  }
+</script>
+ {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
-  color: #333;
-}
-
-header {
-  background-color: #003f5c;
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 50px;
-  margin-right: 15px;
 }
 
 .navbar {
-  background-color: #003f5c;
-  padding: 0.5rem 2rem;
+  background: rgba(0, 63, 92, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.3rem;
   display: flex;
   align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.3);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
 .nav-links li a:hover {
@@ -60,52 +67,37 @@ header img {
 
 .toggle {
   display: none;
+  font-size: 2rem;
+  color: white;
   background: none;
   border: none;
-  font-size: 1.8rem;
-  color: white;
-}
-
-main {
-  padding: 2rem;
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 2rem;
-}
-
-button, .btn {
-  background-color: #ffa600;
-  color: #003f5c;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
   cursor: pointer;
-  font-weight: bold;
 }
 
-button:hover, .btn:hover {
-  background-color: #e69500;
-}
-
-/* Mobile responsive nav */
+/* Mobile Navbar */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
     background-color: #003f5c;
+    position: absolute;
+    top: 70px;
+    right: 20px;
     padding: 1rem;
+    border-radius: 10px;
   }
 
   .nav-links.active {
     display: flex;
+    animation: slideDown 0.3s ease-in-out;
   }
 
   .toggle {
     display: block;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
