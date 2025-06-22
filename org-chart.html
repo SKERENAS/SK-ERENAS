@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Org Chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>SK Erenas</h1>
+  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">SK Erenas</a>
+      <button class="toggle" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="kk-profiling.html">KK Profiling</a></li>
+        <li><a href="printing.html">Free Printing</a></li>
+        <li><a href="org-chart.html">Org Chart</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main><h2>Organizational Chart</h2><p>View the structure of SK Erenas.</p></main>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
