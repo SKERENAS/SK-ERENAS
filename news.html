@@ -2,8 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>News</title>
+  <title>SK News</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .news-container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .news-item {
+      background: #f9fafb;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .news-item h3 {
+      margin: 0;
+      color: #1f2937;
+    }
+    .news-item p {
+      margin: 0.25rem 0 0.75rem;
+    }
+    .news-date {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,11 +49,31 @@
       </ul>
     </div>
   </nav>
-  <main><h2>Latest News</h2><p>Stay updated with the latest SK announcements and events.</p></main>
+  <main class="news-container">
+    <h2>Latest News</h2>
+
+    <div class="news-item">
+      <h3>SK Erenas Supports Daycare Feeding Program</h3>
+      <div class="news-date">June 5, 2025</div>
+      <p>SK officials delivered supplemental food packs to the children of Erenas Daycare Center.</p>
+    </div>
+
+    <div class="news-item">
+      <h3>Basketball Tryouts Held for Youth 18 & Under</h3>
+      <div class="news-date">February 23, 2025</div>
+      <p>Tryouts for the Samar-Leyte United League began at Brgy. Erenas Court. Youth athletes showed their skills in hopes of representing Victoria.</p>
+    </div>
+
+    <div class="news-item">
+      <h3>New SK Logo Launches with Youth Empowerment Theme</h3>
+      <div class="news-date">May 1, 2025</div>
+      <p>The new SK Erenas logo highlights modernization, rebranding, and the spirit of youth leadership.</p>
+    </div>
+
+  </main>
   <script>
     function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('active');
     }
   </script>
 </body>
