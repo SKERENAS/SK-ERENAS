@@ -2,8 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Calendar</title>
+  <title>SK Calendar</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .calendar-container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,11 +37,13 @@
       </ul>
     </div>
   </nav>
-  <main><h2>Event Calendar</h2><p>Upcoming activities and schedules.</p></main>
+  <main class="calendar-container">
+    <h2>Upcoming Events</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?src=en.philippines%23holiday%40group.v.calendar.google.com&ctz=Asia%2FManila" style="height:600px;"></iframe>
+  </main>
   <script>
     function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
+      document.getElementById('navLinks').classList.toggle('active');
     }
   </script>
 </body>
