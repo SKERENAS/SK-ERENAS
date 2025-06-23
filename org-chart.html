@@ -1,88 +1,158 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Organizational Chart</title>
-  <link rel="stylesheet" href="style.css">
+  <title>SK Erenas – Organizational Chart</title>
   <style>
-    .org-chart {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 2rem;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      position: relative;
     }
-    .org-position {
-      background: #f9fafb;
-      padding: 1rem 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      max-width: 400px;
+
+    /* Transparent logo background */
+    body::before {
+      content: '';
+      background: url('assets/img/sklogo.png') no-repeat center center;
+      background-size: 50%;
+      opacity: 0.085;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-      text-align: center;
+      height: 100%;
+      z-index: 0;
     }
-    .org-position strong {
-      display: block;
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2em;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5em;
+      font-size: 2.2rem;
+    }
+
+    .org-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    .member-card {
+      width: 200px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      padding: 1em;
+    }
+
+    .member-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .member-name {
+      font-weight: bold;
       font-size: 1.1rem;
-      color: #1f2937;
-      margin-bottom: 0.25rem;
+      color: #004aad;
+      margin-top: 0.5em;
+    }
+
+    .member-position {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .member-card {
+        width: 90%;
+      }
+      body::before {
+        background-size: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>SK Erenas</h1>
-  </header>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">SK Erenas</a>
-      <button class="toggle" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="kk-profiling.html">KK Profiling</a></li>
-        <li><a href="printing.html">Free Printing</a></li>
-        <li><a href="org-chart.html">Org Chart</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-      </ul>
+  <div class="container">
+    <h1>SK Erenas Organizational Chart</h1>
+    <div class="org-grid">
+
+      <div class="member-card">
+        <img src="photos/chairperson.jpg" alt="Gp Marshall G. Adiaton">
+        <div class="member-name">Gp Marshall G. Adiaton</div>
+        <div class="member-position">SK Chairperson</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/joshua.jpg" alt="Joshua Kentt C. Deculawan">
+        <div class="member-name">Joshua Kentt C. Deculawan</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/cristina.jpg" alt="Cristina Abiner">
+        <div class="member-name">Cristina Abiner</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/peter.jpg" alt="Peter James M. Dela Cerna">
+        <div class="member-name">Peter James M. Dela Cerna</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/ejay.jpg" alt="Ejay Centino">
+        <div class="member-name">Ejay Centino</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/jaycarl.jpg" alt="Jay Carl E. Basibas">
+        <div class="member-name">Jay Carl E. Basibas</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/soren.jpg" alt="Soren M. Din">
+        <div class="member-name">Soren M. Din</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/cherrymae.jpg" alt="Cherry Mae Centino">
+        <div class="member-name">Cherry Mae Centino</div>
+        <div class="member-position">SK Member</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/ayecia.jpg" alt="Ayecia Jane C. Martin">
+        <div class="member-name">Ayecia Jane C. Martin</div>
+        <div class="member-position">SK Secretary</div>
+      </div>
+
+      <div class="member-card">
+        <img src="photos/joemar.jpg" alt="Joemar C. Centino">
+        <div class="member-name">Joemar C. Centino</div>
+        <div class="member-position">SK Treasurer</div>
+      </div>
+
     </div>
-  </nav>
-
-  <main class="org-chart">
-    <h2>SK Erenas Organizational Chart</h2>
-
-    <div class="org-position">
-      <strong>SK Chairperson</strong>
-      Gp Marshall G. Adiaton
-    </div>
-
-    <div class="org-position">
-      <strong>SK Members</strong>
-      Joshua Kentt C. Deculawan<br>
-      Cristina Abiner<br>
-      Peter James M. Dela Cerna<br>
-      Ejay Centino<br>
-      Jay Carl E. Basibas<br>
-      Soren M. Din<br>
-      Cherry Mae Centino
-    </div>
-
-    <div class="org-position">
-      <strong>SK Secretary</strong>
-      Ayecia Jane C. Martin
-    </div>
-
-    <div class="org-position">
-      <strong>SK Treasurer</strong>
-      Joemar C. Centino
-    </div>
-  </main>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>
+  </div>
 </body>
 </html>
