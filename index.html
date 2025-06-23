@@ -1,104 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>SK Erenas – Home</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Transparent logo background */
+    body::before {
+      content: '';
+      background: url('assets/img/sklogo.png') no-repeat center center;
+      background-size: 45%;
+      opacity: 0.085; /* 85% transparent */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
     header {
       background-color: #004aad;
       color: white;
-      padding: 1em;
+      padding: 1.5em;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
+
     .navbar {
-      background-color: #004aad;
-      padding: 0.5em 1em;
-    }
-    .nav-container {
+      background-color: #003366;
+      padding: 0.75em 1em;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: auto;
+      justify-content: center;
+      z-index: 1;
+      position: relative;
     }
-    .logo {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-    .toggle {
-      background: none;
-      border: none;
-      font-size: 1.5em;
-      color: #fff;
-      display: none;
-      cursor: pointer;
-    }
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1em;
-    }
-    .nav-links a {
+
+    .navbar a {
       color: white;
       text-decoration: none;
-      padding: 0.5em;
+      margin: 0 1em;
+      font-weight: bold;
     }
-    .nav-links a:hover {
-      background-color: #002e70;
-      border-radius: 4px;
+
+    .navbar a:hover {
+      text-decoration: underline;
     }
-    @media (max-width: 768px) {
-      .toggle {
-        display: block;
-      }
-      .nav-links {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-    }
+
     main {
-      padding: 2em;
+      text-align: center;
+      padding: 3em 1em;
       max-width: 800px;
       margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #002855;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 2em;
+      background-color: #004aad;
+      color: white;
+      padding: 0.75em 1.5em;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #00308a;
+    }
+
+    footer {
+      background-color: #002e70;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>SK Erenas</h1>
+    <p>Serving and Empowering the Youth of Barangay Erenas</p>
   </header>
+
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">SK Erenas</a>
-      <button class="toggle" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="kk-profiling.html">KK Profiling</a></li>
-        <li><a href="printing.html">Free Printing</a></li>
-        <li><a href="org-chart.html">Org Chart</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-      </ul>
-    </div>
+    <a href="index.html">Home</a>
+    <a href="kk-profiling.html">KK Profiling</a>
+    <a href="printing.html">Free Printing</a>
+    <a href="org-chart.html">Org Chart</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="calendar.html">Calendar</a>
   </nav>
+
   <main>
-    <p>Welcome to the official website of SK Erenas. Use the menu above to explore services, updates, and more.</p>
+    <h1>Welcome to SK Erenas</h1>
+    <p>
+      We are committed to providing opportunities, support, and platforms for the youth of Barangay Erenas to grow,
+      lead, and thrive. Explore our programs, projects, and community efforts using the navigation links above.
+    </p>
+    <a class="btn" href="org-chart.html">Meet Your SK Officials</a>
   </main>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
-    }
-  </script>
+
+  <footer>
+    &copy; 2025 SK Erenas. All rights reserved.
+  </footer>
 </body>
 </html>
