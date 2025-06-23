@@ -24,24 +24,12 @@
       max-width: 1000px;
       margin: auto;
     }
-    .logo {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.2em;
-    }
-    .toggle {
-      background: none;
-      border: none;
-      font-size: 1.5em;
-      color: #fff;
-      display: none;
-      cursor: pointer;
-    }
     .nav-links {
       list-style: none;
       display: flex;
       gap: 1em;
+      margin: 0;
+      padding: 0;
     }
     .nav-links a {
       color: white;
@@ -52,19 +40,6 @@
       background-color: #002e70;
       border-radius: 4px;
     }
-    @media (max-width: 768px) {
-      .toggle {
-        display: block;
-      }
-      .nav-links {
-        flex-direction: column;
-        display: none;
-        width: 100%;
-      }
-      .nav-links.active {
-        display: flex;
-      }
-    }
     main {
       padding: 2em;
       max-width: 800px;
@@ -74,36 +49,19 @@
 </head>
 <body>
   <header>
-  <h1 style="font-size: 2.5rem; margin-bottom: 0.2em;">Welcome to SK Erenas</h1>
-  <p style="font-size: 1.25rem;">Serving the youth of Barangay Erenas...</p>
+    <h1>Welcome to SK Erenas</h1>
+    <p>Serving the youth of Barangay Erenas...</p>
   </header>
-  <!-- Elegant SK Erenas Navbar -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="SK Erenas Logo" style="height: 40px; vertical-align: middle;">
-      <span>SK Erenas</span>
-    </a>
-    <button class="toggle" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="kk-profiling.html">KK Profiling</a></li>
-      <li><a href="printing.html">Free Printing</a></li>
-      <li><a href="org-chart.html">Org Chart</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="calendar.html">Calendar</a></li>
-    </ul>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="org-chart.html">Org Chart</a></li>
+      </ul>
+    </div>
+  </nav>
   <main>
-    <p>Welcome to the official website of SK Erenas. Use the menu above to explore services, updates, and more.</p>
+    <p>This is the official website of SK Erenas. Use the menu to navigate.</p>
   </main>
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
